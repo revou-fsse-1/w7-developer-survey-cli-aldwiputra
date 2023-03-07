@@ -1,7 +1,7 @@
 import inquirer from 'inquirer';
 
 function validationFactory(checker, errorMsg) {
-  return async (input) => (checker(input) ? true : errorMsg);
+  return (input) => (checker(input) ? true : errorMsg);
 }
 
 function emptyStringChecker(input) {
@@ -18,7 +18,7 @@ const questions = [
     name: 'firstName',
     message: "What's your first name?",
     validate: validationFactory(emptyStringChecker, 'Name cannot be empty'),
-    filter: async (input) => input.trim().toLowerCase().charAt(0).toUpperCase() + input.slice(1),
+    filter: (input) => input.trim().toLowerCase().charAt(0).toUpperCase() + input.slice(1),
   },
   {
     type: 'input',
@@ -45,14 +45,14 @@ const questions = [
     message: 'How many javascript library do you know?',
     choices: ['React.js', 'Vue', 'Angular', 'Node.js', 'jQuery', 'D3.js'],
     when: (answers) => (answers.isExperienced === 'yes' ? true : false),
-    validate: async (input) => (input.length > 0 ? true : 'You have to choose at least one library'),
+    validate: (input) => (input.length > 0 ? true : 'You have to choose at least one library'),
   },
   {
     type: 'number',
     name: 'expectedSalary',
     message: 'What is your desired salary?',
     when: (answers) => (answers.isExperienced === 'yes' ? true : false),
-    validate: async (input) => (input > 0 ? true : 'Salary cannot be 0'),
+    validate: (input) => (input > 0 ? true : 'Salary cannot be 0'),
   },
 ];
 
