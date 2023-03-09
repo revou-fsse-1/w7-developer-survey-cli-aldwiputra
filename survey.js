@@ -12,6 +12,10 @@ function validEmailChecker(input) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input);
 }
 
+function experienceChecker({ isExperienced }) {
+  return isExperienced == 'yes' ? true : false;
+}
+
 const questions = [
   {
     type: 'input',
@@ -39,21 +43,21 @@ const questions = [
     name: 'yearsOfExperience',
     message: 'How many years of experience you have with JavaScript?',
     choices: ['0-1', '1-3', '3-5', '5-10', '10+'],
-    when: answers => (answers.isExperienced === 'yes' ? true : false),
+    when: experienceChecker,
   },
   {
     type: 'checkbox',
     name: 'jsLibraries',
     message: 'How many javascript library do you know?',
     choices: ['React.js', 'Vue', 'Angular', 'Node.js', 'jQuery', 'D3.js'],
-    when: answers => (answers.isExperienced === 'yes' ? true : false),
+    when: experienceChecker,
     validate: input => (input.length > 0 ? true : 'You have to choose at least one library'),
   },
   {
     type: 'number',
     name: 'expectedSalary',
     message: 'What is your desired salary?',
-    when: answers => (answers.isExperienced === 'yes' ? true : false),
+    when: experienceChecker,
     validate: input => (input > 0 ? true : 'Salary cannot be 0'),
   },
 ];
@@ -62,7 +66,7 @@ const questions = [
 inquirer
   .prompt(questions)
   .then(answers => {
-    console.log(JSON.stringify(answers, null, 2));
+    console.log(`\x1b[33m${JSON.stringify(answers, null, 2)}`);
   })
   .catch(error => {
     if (error.isTtyError) {
