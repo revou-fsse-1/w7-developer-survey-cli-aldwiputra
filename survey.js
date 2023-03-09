@@ -13,7 +13,7 @@ function validEmailChecker(input) {
 }
 
 function experienceChecker({ isExperienced }) {
-  return isExperienced == 'yes' ? true : false;
+  return isExperienced === 'yes';
 }
 
 const questions = [
