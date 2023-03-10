@@ -11,7 +11,7 @@ This is a command-line interface (CLI) application that allows developers to par
 ## Installation
 To install the application, follow these steps:
 
-Clone the repository: ``git clone https://github.com/revou-fsse-1/w7-developer-survey-cli-aldwiputra.git``
+Clone the repository: ` \`git clone https://github.com/revou-fsse-1/w7-developer-survey-cli-aldwiputra.git \``
 
 Install the dependencies: ``npm install``
 
@@ -38,6 +38,3 @@ Contributions are welcome! If you'd like to contribute to the project, please fo
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for more details.
-
-That should give you a good starting point for your README file. Make sure to update the content as needed to accurately reflect your project!
-
