@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "app": "node ./survey.js"
+    "start": "node ./survey.js"
   },
   "author": "",
   "license": "ISC",

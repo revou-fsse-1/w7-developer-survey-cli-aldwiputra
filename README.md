@@ -1,48 +1,43 @@
-# Developer Survey CLI
+# Week 7 Developer Survey CLI - aldwiputra
+This is a command-line interface (CLI) application that allows developers to participate in a survey.
 
-- Assignment Example for Week 7: Programming — JavaScript, Node.js, npm, TypeScript
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
-We will make Developer Survey using CLI and JavaScript
 
-## Prerequisites
+## Installation
+To install the application, follow these steps:
 
-- Node.js
-- NPM
-  - Inquirer
-- JavaScript
-- Terminal
+Clone the repository: ``git clone https://github.com/revou-fsse-1/w7-developer-survey-cli-aldwiputra.git``
 
-You can use starter code from folder starter
+Install the dependencies: ``npm install``
 
-- What's your first name?
-  Rules
-  - Input type "input"
-  - Validate not empty
 
-- Hello (name from question 1) What's your email address?
-  Rules
-  - Input type "input"
-  - Validate not empty
+## Usage
+To use the application, run the following command:
 
-- Are you experienced Developer?
-  Rules
-  - Input type "list", [yes, no]
-  - Validate not empty
+```sh
+npm start
+```
 
-- How many years of experience you have with JavaScript?
-  Rules
-  - Input type "list", ["0-1", "1-3", "3-5", "5-10", "10+"]
-  - Validate not empty
-  - Only show if question 3 selected "yes"
+The CLI will then prompt you to answer a series of survey questions.
 
-- What JavaScript library do you know?
-  Rules
-  - Input type "checkbox", ["React.js", "Vue", "Angular", "Node.js", "jQuery", "D3.js"]
-  - Validate not empty
-  - Only show if question 3 selected "yes"
+## Contributing
+Contributions are welcome! If you'd like to contribute to the project, please follow these steps:
 
-- What is your desired salary?
-  Rules
-  - Input type "number"
-  - Validate salary more than zero
-  - Only show if question 3 selected "yes"
+- Fork the repository
+- Create a new branch: `git checkout -b my-new-feature`
+- Make your changes
+- Commit your changes: `git commit -am 'Add some feature'`
+- Push to the branch: `git push origin my-new-feature`
+- Create a pull request
+
+
+## License
+This project is licensed under the MIT License. See the LICENSE file for more details.
+
+That should give you a good starting point for your README file. Make sure to update the content as needed to accurately reflect your project!
+
